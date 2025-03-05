@@ -12,7 +12,7 @@ Use AWS Identity and Access Management (IAM) to control who is authenticated (si
   -⚡️ Boost our computing power to match increased traffic to the website.
   -👩‍💻 Onboard an intern - they should have the right permission settings to contribute while keeping the company's resources secure.
 
-# Steps
+# Step 1 
 
   -Launch two Amazon EC2 instances.
   -Log in to your https://console.aws.amazon.com/ or create an account.
@@ -34,7 +34,7 @@ Create a unique name
 
 ![image](https://github.com/user-attachments/assets/6e8d4432-6025-4be6-be55-0f19f0749e06)
 
- We will add some tags to this. And what are tags for? They are useful filters when you're searching for something. You will see how it works in this project later.
+ We will add some tags to this. And what are tags for? They are useful filters when you're searching for something, Grouping, mass management, and applying security policies. You will see how it works in this project later.
  Click Add additional tags and add a key and a value.
  Key: Env
  Value: production
@@ -62,6 +62,10 @@ For the tags we will use
 
  ![image](https://github.com/user-attachments/assets/fc3ac3cd-f6da-4c0c-aed0-ced7c5b20512)
 ![image](https://github.com/user-attachments/assets/bd7fec71-f8c5-493b-876f-c6a7176e34ea)
+proceed without a key pair again.
+then launch instance.
 
 What did we just do?
 The development environment we creeated is where developers write, test, and debug code before it's deployed to production, which is the live environment that your end users can use! that is why we made two instances. 
+
+# Step 2 
