@@ -66,7 +66,7 @@ proceed without a key pair again.
 then launch instance.
 
 What did we just do?
-The development environment we creeated is where developers write, test, and debug code before it's deployed to production, which is the live environment that your end users can use! that is why we made two instances. 
+The development environment we created is where developers write, test, and debug code before it's deployed to production, which is the live environment that your end users can use! that is why we made two instances. 
 
 # Step 2 
 
@@ -115,3 +115,17 @@ click on next and fill in policy name and description then click "create Policy"
 
 # Step 3
 
+Create an AWS Account alias.
+An Account Alias is a friendly name for your AWS account that you can use instead of your account ID (which is usually a bunch of digits, as you can see in the next screenshot) to sign in to the AWS Management Console.
+You would create an alias to make it easier to remember and share your AWS console's login URL with others and make it unique.
+Go to the dashboard, and on the right side of the page we can create our alias.
+
+![image](https://github.com/user-attachments/assets/64f565eb-0180-433f-8c85-fa04a77de5dd)
+
+In the Preferred alias field, enter Project-alias-yourname.
+![image](https://github.com/user-attachments/assets/73456ef7-e5cc-4d42-baef-f1584541278c)
+
+Create alias.
+![image](https://github.com/user-attachments/assets/e327afd5-324e-410e-b793-2a1c9c4146f4)
+
+# Step 4
