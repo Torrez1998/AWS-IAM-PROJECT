@@ -69,3 +69,49 @@ What did we just do?
 The development environment we creeated is where developers write, test, and debug code before it's deployed to production, which is the live environment that your end users can use! that is why we made two instances. 
 
 # Step 2 
+
+Search IAM in the Search bar and open the dashboard.
+we will use AWS IAM to manage the access level that other users and services have to your resources.
+![image](https://github.com/user-attachments/assets/89421de5-e18f-4add-b6f4-2a66f546acdf)
+![image](https://github.com/user-attachments/assets/09418beb-19d6-4aae-ba21-98e25aec6f4e)
+
+Click on "Policies" on the left side of the page and create a policy.
+
+IAM policy is a rule for who can do what with your AWS resources. It's all about giving permissions to IAM users, groups, or roles, saying what they can or can't do on certain resources, and when those rules kick in.
+
+Switch your Policy editor tab to JSON editor.
+![image](https://github.com/user-attachments/assets/90b56671-26b9-4b9c-8010-01f930973a57)
+
+![image](https://github.com/user-attachments/assets/9a030864-3b53-4bde-93d3-41073f20c093)
+
+![image](https://github.com/user-attachments/assets/e156ceb0-1fa2-4dd6-b691-f441e3447eab)
+
+Erase everything and we will create our own policy.
+
+This policy I put together allows some actions (like starting, stopping, and describing EC2 instances) for instances tagged with "Env = development" while denying the ability to create or delete tags for all instances.
+Here is the explanation for what this policy will do.
+
+Statement
+‍The main part of the policy structure and defines a list of permissions.
+
+‍Effect
+‍This can have two values - either Allow or Deny - to indicate whether the policy allows or denies a certain action. Deny has priority. Looking at the first statement, "Effect": "Allow" means this statement is trying to allow for an action.
+
+‍Action
+‍A list of the actions that the policy allows or denies. In this case, "Action": "ec2:*" means all actions that you could possibly take on EC2 instances are allowed. Woohoo!
+
+‍Resource
+‍Which resources does this policy apply to? Specifying "*" means all resources within the defined scope (see the next point).
+
+Condition Block (optional)
+‍The circumstances under which the policy is in action. In this case, the condition is that the resource is tagged Env - development. This means specifying "Resource": "*" in the line above means all resources with the Env - development tag are impacted by your statement.
+
+![image](https://github.com/user-attachments/assets/ec5bc656-8d6a-48f5-a2a1-f4727b166fc4)
+
+click on next and fill in policy name and description then click "create Policy".
+![image](https://github.com/user-attachments/assets/df1ee1c8-12b3-424c-a061-bd8f2bcb4090)
+
+![image](https://github.com/user-attachments/assets/c2d617b6-33b8-4e95-a6f6-5037bb55b12c)
+
+# Step 3
+
