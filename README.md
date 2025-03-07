@@ -127,5 +127,42 @@ In the Preferred alias field, enter Project-alias-yourname.
 
 Create alias.
 ![image](https://github.com/user-attachments/assets/e327afd5-324e-410e-b793-2a1c9c4146f4)
+It should be a lot faster for users to find your account and log in now.
 
 # Step 4
+
+new interns dont actually have a way to log in to a team's AWS account yet
+You wouldn't want to just share your account details with them. After all, you have access to the production instance, which they shouldn't get access to.
+
+Let's solve this problem using IAM again - this time we're using two other tools called groups and users.
+let us create our first User group so we can manage all interns' permissions from one place.
+
+Choose User groups in your left-hand navigation panel.
+Choose Create group.
+Let's create the first user group!
+
+![image](https://github.com/user-attachments/assets/45f136a3-b1d4-48cf-b7c4-4d4ca0d2a387)
+
+Name user group
+
+![image](https://github.com/user-attachments/assets/1ec0da67-0240-4085-8c58-5bb97c618d42)
+
+Search env and attach the policy that we create in step 3
+![image](https://github.com/user-attachments/assets/d244de02-2e6f-45b9-a1ff-9c7c95cfa79a)
+
+Then create
+![image](https://github.com/user-attachments/assets/97b86455-0e7b-49f9-964b-cc392b3782fe)
+
+Now it is time to add our users.
+
+💡 Why do we need users in our user group?
+IAM users are the people that will get access to your resources/AWS account, whereas user groups are the collections/folders of users for easier user management.
+
+This simplifies managing permissions and ensures consistency across users who have similar access to AWS resources. Imagine if you have a whole team of 5 interns (users) that need the same permission settings.
+
+Choose Users from the left-hand navigation panel.
+Choose Create user.
+Let's set up this user! Under User name, enter nextwork-dev-yourname
+Tick the checkbox for Provide user access to the AWS Management Console.
+
+![image](https://github.com/user-attachments/assets/78931d4d-cdeb-4317-acca-b7c51d283223)
