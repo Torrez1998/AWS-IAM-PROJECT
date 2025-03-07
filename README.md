@@ -162,7 +162,22 @@ This simplifies managing permissions and ensures consistency across users who ha
 
 Choose Users from the left-hand navigation panel.
 Choose Create user.
-Let's set up this user! Under User name, enter nextwork-dev-yourname
+Let's set up this user! Under User name, enter Project-dev-yourname
 Tick the checkbox for Provide user access to the AWS Management Console.
+If you don't tick this box, your new user won't get to sign in and access AWS services through the Console only access through using more advanced methods.
 
 ![image](https://github.com/user-attachments/assets/78931d4d-cdeb-4317-acca-b7c51d283223)
+
+![image](https://github.com/user-attachments/assets/c5360fcc-33e8-491d-b00d-da7f2a910f33)
+
+![image](https://github.com/user-attachments/assets/54e986ce-8691-45c2-bbf9-6f239e7b3371)
+
+Next, add the permissions we just added.
+review and create.
+![image](https://github.com/user-attachments/assets/f4082278-b09b-4afa-96a3-7f188e487908)
+
+![image](https://github.com/user-attachments/assets/2d45ce4f-5997-424c-aa7e-7894a063d2d7)
+
+We just created a user Group with any users(interns) that are added will inherit the permissions we placed on the User group.
+
+# Step 5 
