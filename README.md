@@ -2,11 +2,15 @@
 
 Use AWS Identity and Access Management (IAM) to control who is authenticated (signed in) and authorized (has permissions) to use your account's resources.
 
+![image](https://github.com/user-attachments/assets/4e22f64d-57ce-4fa0-b42e-76c55f7a2455)
+
+
 # Tools
   -EC2 instances
   -IAM policies
   -IAM Users and User Groups
   -AWS Account Alias
+
 
 # Job Objective for Project
   -⚡️ Boost our computing power to match increased traffic to the website.
@@ -106,6 +110,8 @@ Statement
 Condition Block (optional)
 ‍The circumstances under which the policy is in action. In this case, the condition is that the resource is tagged Env - development. This means specifying "Resource": "*" in the line above means all resources with the Env - development tag are impacted by your statement.
 
+you will usually always use an amazon template instead as it is best practice but for this i decided to make my own for more understanding on how it works.
+
 ![image](https://github.com/user-attachments/assets/ec5bc656-8d6a-48f5-a2a1-f4727b166fc4)
 
 click on next and fill in policy name and description then click "create Policy".
@@ -188,4 +194,39 @@ use the credentials we received.
 
 ![image](https://github.com/user-attachments/assets/d525e911-764d-4d6d-a4d7-3c5395f43333)
 
-![image](https://github.com/user-attachments/assets/421aa987-a804-4a37-a40c-4554353fdaac)
+as you can see, it looks differnet and things are accessed denied.
+Any intern or new imploye should have limited access to things in the organization.
+
+we will now test out the user EC2 console. 
+seach EC2 in the search bar and click then we will go into our instances. 
+
+![image](https://github.com/user-attachments/assets/b4f45aa0-1d06-424c-bfe0-15f721eaf2db)
+
+lets test a rule by trying to delete an instance we created as an intern or new employee.
+
+Click on the production instance we are currently on, and then, in the actions section at the top right of the web page, we will manage the instance state.
+click on stop and try to change the state.
+![image](https://github.com/user-attachments/assets/99168b20-399a-49a1-9a47-22fd3dbc75de)
+
+![image](https://github.com/user-attachments/assets/5334511b-7696-46e9-8c96-5ef6172380d9)
+
+You should get a fail to stop the instance and should still be running.
+
+![image](https://github.com/user-attachments/assets/36bac6cc-c3ce-4f79-9a05-f8ec8fcfa7a6)
+
+Great, now let's try the development instance, same process like we did with the production instance. Try and stop the instance.
+
+![image](https://github.com/user-attachments/assets/589c2abd-523f-49a5-bac1-57de314b7e22)
+
+looks like everything is working.
+We are done!
+Make sure to delete all instances, users, and policies that we made before logging off or finishing to avoid any extra charges.
+
+In this project, I have learned...
+
+💻 Launch EC2 instances.
+🏷️ Use tags for easy identification.
+💂 Set up IAM policies accessing EC2 instances based on their environment (development or production)
+👩‍👩‍👧‍👧 Create an IAM user and assign them to the appropriate user group with the necessary permissions for their role.
+🔓 Test IAM access for the User you've created.
+
