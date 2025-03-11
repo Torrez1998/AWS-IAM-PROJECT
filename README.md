@@ -181,3 +181,11 @@ review and create.
 We just created a user Group with any users(interns) that are added will inherit the permissions we placed on the User group.
 
 # Step 5 
+Using a new incognito window, we will log in to our user we just created.
+use the credentials we received.
+![image](https://github.com/user-attachments/assets/855ecbad-533e-4fb5-9dfc-174d39baffe6)
+
+
+![image](https://github.com/user-attachments/assets/d525e911-764d-4d6d-a4d7-3c5395f43333)
+
+![image](https://github.com/user-attachments/assets/421aa987-a804-4a37-a40c-4554353fdaac)
